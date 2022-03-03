@@ -113,14 +113,13 @@ h1 {
     align-self: center;
 }
 /*-==================== SERVICE ====================*/
+
 .services__heading{
     width: 100%;
     justify-content: center;
     padding: 5em;
     
 }
-
-
 
 /*-==================== ABOUT ====================*/
 
@@ -187,6 +186,7 @@ h1 {
 }
 
 /*-==================== GALLERY ====================*/
+
 #gallery .col-lg-4{
     margin: 0 !important;
     padding: 25px;
