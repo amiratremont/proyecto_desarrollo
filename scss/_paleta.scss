@@ -1,0 +1,34 @@
+// Paleta de colores en Saas
+
+
+// Map
+$paleta:(
+    primary:#EFEDE9,
+    secondary: white,
+    sucess: darkorchid,
+    info: black,
+);
+
+// Mixin
+@mixin bottonMixin($color) {
+        color: $color;
+        width: 100px;
+        height: 50px;
+        border: 1px solid $color;
+        border-radius: 5px;
+    
+}
+
+// Bucle
+@each $nombre, $paletacolor in $paleta {
+    .#{nombre} {
+        @include bottonMixin($paletacolor,);
+        @extend .brand
+    }
+}
+
+// Extend
+.brand {
+    margin-top: -7px;
+    color: black;
+}
