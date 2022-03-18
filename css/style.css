@@ -58,12 +58,14 @@ body {
 
 .menu .active {
     color: darkorchid;
+    border-radius: 5%;
 }
 
 .menu a:hover {
     background-color: darkorchid;
     color: white;
     transition: ease-in .4s;
+    border-radius: 5%;
 }
 
 /*-==================== MAIN ====================*/
@@ -107,11 +109,13 @@ h1 {
     z-index: 1;
 }
 /*-==================== CARRUSEL ====================*/
-.carousel-inner{
-    width: 100%;
-    height: 100%;
-    align-self: center;
-}
+
+.carousel, .carousel-inner > .item > img {
+    height: 60%;
+    width: 60%;
+    margin-left: 20%;
+ }
+
 /*-==================== SERVICE ====================*/
 
 .services__heading{
@@ -183,6 +187,7 @@ h1 {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+   
 }
 
 /*-==================== GALLERY ====================*/
@@ -208,6 +213,11 @@ h1 {
     height: 300px;
     background-color: rgb(202, 198, 202);
     margin: 2em;
+    border-radius: 10px;
+}
+
+.card-group {
+    border-radius: 10px;
 }
 
 .card__img {
@@ -227,6 +237,7 @@ h1 {
     margin-top: 10px;
     cursor: pointer;
     box-shadow: white;
+    border-radius: 10px;
 }
 
 .project__details:hover{
@@ -242,29 +253,38 @@ h1 {
     justify-content: center;
     margin-top: 1em;
     margin-left: 3em;
+   
 } 
 
 .card__title{
     margin-top: 3em;
     text-align: center;
+    
 }
 
 /*-==================== CONTACT ====================*/
 
+.contact__heading h2 {
+    font-size: 2.5em;
+}
+
 .contact__heading {
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 1em;
     padding: 2em;
+    background-color: white;
 }
 
 .container__contac{
 
     display: flex;
+    width: 100%;
     justify-content: center;
-    padding: 3em;
+    padding: 5em;
     margin: 0 auto;
     align-items: center;   
     background-color: white;
+    
 }
 
 .form {
@@ -300,13 +320,13 @@ h1 {
     border: none;
     background-color: violet ;
     border-radius: 20px;
-    cursor: pointer ;
+    cursor: pointer;
     box-shadow: yellowgreen;
 }
 .btn__submit :hover {
 
     background-color: greenyellow;
-    box-shadow: none;
+    box-shadow: none
 }
 
 
@@ -484,10 +504,11 @@ h1 {
 
 /*Mobile*/ 
 
-@media screen and (max-width: 576px) {
+/*-====================@media screen and (max-width: 576px) {
 
     .wrapper {
 
+        display: grid;
         width: 100vw;
         height: 20vh;
         text-align: center;
@@ -496,21 +517,22 @@ h1 {
 
     .navbar{
 
-        display: flex;
+        display: grid;
         justify-content: center;
-        padding: 3em;  
+        padding: 5em;  
+        align-content:center ;
     }
 
 
     .brand {
-        display: grid;
+        display: flex;
         margin-top: 5px;
         color: black;
     }
 
     .menu {
 
-        display: grid;
+        display: flex;
         margin: 5%;  
     }
 
@@ -524,20 +546,27 @@ h1 {
         width: 80vw;
         height: 80vh;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 2fr);
         align-items: center; 
     }
     
     .main img {
+        align-content: center;
         width:  0px;
         height: 0px;
     }
 
+    .info-content {
+        text-align: center;
+        margin-top: auto;
+    }
+
     .about {
-        display: flex;
+        display: grid;
         width: 100%;
         height: 100vh;
         margin: 0 auto;
+        align-content: center;
     }
 
     .about-info h2 {
@@ -547,6 +576,7 @@ h1 {
     }
     
     .about-info {
+        display: grid;
         margin-top: 40%;
         grid-column: 1/1;
         font-size: 1em;
@@ -555,14 +585,11 @@ h1 {
         text-align: center ;
     }
     
-    #about img {
-        align-content: center;
-        
-        
-        
+
+    .footer {
+        display: grid;
     }
-
-
+    
 
 
 }
