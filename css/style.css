@@ -21,14 +21,13 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #EFEDE9;
-    color: black;
+    color: rgb(114, 104, 104);
 }
 
 
 /*-==================== HEADER ====================*/
 
 .navbar{
-
     display: flex;
     justify-content: space-between;
     padding: 2em;
@@ -39,8 +38,8 @@ body {
     color: black;
 }
 
-
 .menu {
+    
     display: flex;
     width: 50%;
     justify-content:space-around;
@@ -77,10 +76,12 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    
 }
 
 h1 {
     font-size: 3.2em;
+    color: black;
 }
 .span {
     color: yellowgreen;
@@ -114,15 +115,6 @@ h1 {
     height: 60%;
     width: 60%;
     margin-left: 20%;
- }
-
-/*-==================== SERVICE ====================*/
-
-.services__heading{
-    width: 100%;
-    justify-content: center;
-    padding: 5em;
-    
 }
 
 /*-==================== ABOUT ====================*/
@@ -137,13 +129,13 @@ h1 {
 }
 
 .about img {
-    width: 50%;
-    margin-left: 70px;
+    width: 55%;
+    margin-left: 90px;
 }
 
 .about-info {
     grid-column: 2/10;
-    padding: 3em;
+    padding: 4em;
 }
 
 .about-info h2 {
@@ -163,11 +155,98 @@ h1 {
     margin-bottom: 1em;
 }
 
+/*-==================== ABOUT PROGRESS ====================*/
+
+.progress{
+    background-color: violet;
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items:center;
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 100%;
+}
+
+.pro-value1{
+    animation: load1 3s normal forwards ;
+    border-radius: 50px;
+    background-color:greenyellow ;
+    height: 25px;
+    width: 0;
+}
+
+.pro-value2{
+    animation: load2 3s normal forwards ;
+    border-radius: 50px;
+    background-color:greenyellow ;
+    height: 25px;
+    width: 0;
+}
+
+.pro-value3{
+    animation: load3 3s normal forwards ;
+    border-radius: 50px;
+    background-color:greenyellow ;
+    height: 25px;
+    width: 0;
+}
+
+.pro-value4{
+    animation: load4 3s normal forwards ;
+    border-radius: 50px;
+    background-color:greenyellow ;
+    height: 25px;
+    width: 0;
+}
+
+.progress p {
+    color: black;
+    padding: 5px;
+}
+
+@keyframes load1 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes load2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes load3 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes load4 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
 /*-==================== PORTFOLIO ====================*/
 
 .portfolio {
     width: 100vw;
-    background-color: #EFEDE9;
+    height: 80vw;
+    background-color:white;
     color: black;
 }
 
@@ -187,7 +266,6 @@ h1 {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-   
 }
 
 /*-==================== GALLERY ====================*/
@@ -198,94 +276,88 @@ h1 {
 }
 #gallery img {
     width: 100%;
-    height: 250px;
+    height: 220px;
 }
 
 #gallery img:hover {
-    border: 5px solid #f7f7f7
+    border: 5px solid violet
 }
 
-/*-==================== CARD ====================*/
+/*-==================== SERVICES ====================*/
 
-.card {
-
-    width: 300px;
-    height: 300px;
-    background-color: rgb(202, 198, 202);
-    margin: 2em;
-    border-radius: 10px;
-}
-
-.card-group {
-    border-radius: 10px;
-}
-
-.card__img {
-
+.services__heading{
     width: 100%;
-    height: 150px;
-    background-image: url(../images/portfolio1.jpg);
-    background-size: cover;
-}
-
-.project__details{
-
-    padding: 10px 20px;
-    background-color: violet;
-    border: none;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    box-shadow: white;
-    border-radius: 10px;
-}
-
-.project__details:hover{
-
-    background-color: greenyellow;
-    box-shadow: none;
-}
-
-.card .project__details{
-
-    width: 70%;
-    align-content: center;
     justify-content: center;
-    margin-top: 1em;
-    margin-left: 3em;
-   
-} 
-
-.card__title{
-    margin-top: 3em;
-    text-align: center;
+    padding: 5em;
     
 }
+
+/*-==================== SERVICES CARDS ====================*/
+
+.card{
+    border: none;
+    outline: none;
+    -webkit-box-shadow:-8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow:-8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow:-8px 6px 89px -65px rgba(0,0,0,0.75);
+    
+}
+.card p{
+    color: gray;
+}
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: #EFEDE9;
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.card:hover .circle{
+    background-color: darkorchid;
+    color: white;
+    transition: 0,5s;
+}
+
 
 /*-==================== CONTACT ====================*/
 
 .contact__heading h2 {
     font-size: 2.5em;
+    
 }
 
 .contact__heading {
-    margin-top: 50px;
-    font-size: 1em;
-    padding: 2em;
-    background-color: white;
+    width: 100%;
+    justify-content: center;
+    padding: 5em;
+    background-color: #EFEDE9;
 }
 
 .container__contac{
 
     display: flex;
-    width: 100%;
     justify-content: center;
-    padding: 5em;
-    margin: 0 auto;
-    align-items: center;   
-    background-color: white;
-    
+    padding: 1em;
+    margin-bottom:0%;
+    background-color: #EFEDE9;
 }
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.contact__form h4 {
+    padding: 10px;
+    text-align: left;
+}
+
 
 .form {
 
@@ -323,7 +395,7 @@ h1 {
     cursor: pointer;
     box-shadow: yellowgreen;
 }
-.btn__submit :hover {
+.btn__submit:hover {
 
     background-color: greenyellow;
     box-shadow: none
@@ -349,6 +421,7 @@ h1 {
 
     font-size: 1em;
     color: white;
+    text-align: center;
 }
 
 .footer__content h5 {
@@ -356,6 +429,7 @@ h1 {
     font-size: 1em;
     justify-content: left;
     color: white;
+    
 }
 
 .social__network {
@@ -364,7 +438,20 @@ h1 {
     justify-content: space-evenly;
     width: 300px;
     margin-top: 1em; 
-    color: white;   
+    color: white; 
+    text-decoration: white;
+}
+
+.social__network i {
+    color: lavender;
+    text-decoration: none;
+    size: 2px;
+
+}
+
+.social__network :hover{
+    background-color:black;
+    color: darkorchid;
 }
 
 
@@ -375,7 +462,7 @@ h1 {
 @media screen and (max-width: 1024px) { 
     
     .wrapper{
-        height: 70vh;
+        height: 60vw;
     }
 
     .main {
@@ -389,7 +476,7 @@ h1 {
     }
 
     .about {
-        height: 70vh;
+        height: 200vh;
         width: 100vw;
     }
 
@@ -402,16 +489,12 @@ h1 {
     .portfolio .container{
         
         width: 80vw;
-        height: 70vh;
+        height: 80vh;
         margin: 0 auto;
         display: flex;
         flex-wrap:wrap
     }
 
-    .card .project__details{
-
-        margin-left: 2.5em;
-    }
 
     .container__contac{
         padding: 1em;
@@ -420,7 +503,7 @@ h1 {
 
     .contact__heading {
 
-        font-size: 1.5em;
+        font-size: 20px;
         padding: 2em;
     }
 
@@ -432,6 +515,10 @@ h1 {
     }
     
     
+    .social__network :hover{
+        background-color:black;
+        color: darkorchid;
+    }
 }
 
 
@@ -470,127 +557,139 @@ h1 {
         color: black;
     }
 
+    .portfolio {
+        width: 100vw;
+        height: 85vw;
+        background-color: white;
+        color: black;
+    }
+
     .card {
 
-        width: 350px;
-        height: 200px;
-        margin: 1em;
-        font-size: 1em;
+        height: 300px;
+        align-items: center;
+        justify-content: center;
         
     }
 
-    .card .project__details{
+    .contact__heading{
+        padding: 4%; 
+        font-size: 18px;  
+        margin-left: 5%;
+        
+    }
 
-        width: 100%;
+    .container__contac{
+        padding-top: 0px;
         align-content: center;
-        justify-content: center;
-        margin-top: 1em;
-        margin-left: 0em;  
-    } 
+        height: 70vh;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 150px;
+        background-color: black;
+    }
+
+
+    .social__network :hover{
+        background-color:black;
+        color: darkorchid;
+    }
     
-    .card__title{
-        margin-top: 0em;
-        text-align: center; 
-    }
-
-    .card__img {
-
-        width: 100%;
-        height: 60%;
-    }
 
 }  
     
 
 /*Mobile*/ 
 
-/*-====================@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
+
+
+    .menu {
+        display: flex;
+        width: 50%;
+        justify-content:space-around;
+        flex-wrap: wrap;
+    }
+
+    .menu .active {
+        color: darkorchid;
+        border-radius: 1%;
+    }
+    .main {
+        margin: 0 auto;
+        width: 85vw;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: (2, 1fr);
+        align-items: center;
+        
+    }
 
     .wrapper {
 
-        display: grid;
-        width: 100vw;
-        height: 20vh;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .navbar{
-
-        display: grid;
-        justify-content: center;
-        padding: 5em;  
-        align-content:center ;
-    }
-
-
-    .brand {
-        display: flex;
-        margin-top: 5px;
-        color: black;
-    }
-
-    .menu {
-
-        display: flex;
-        margin: 5%;  
-    }
-
-    .menu a {
-
-        padding: 2px 5px;
-    }
-
-    .main {
-        margin: 0 auto;
-        width: 80vw;
-        height: 80vh;
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        align-items: center; 
-    }
-    
-    .main img {
-        align-content: center;
-        width:  0px;
-        height: 0px;
-    }
-
-    .info-content {
-        text-align: center;
-        margin-top: auto;
-    }
-
-    .about {
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        margin: 0 auto;
-        align-content: center;
-    }
-
-    .about-info h2 {
-        font-size: 1.5em;
-        color: black;
-        
-    }
-    
-    .about-info {
-        display: grid;
-        margin-top: 40%;
-        grid-column: 1/1;
-        font-size: 1em;
-        padding: 1em;
-        align-content: center;  
-        text-align: center ;
-    }
-    
-
-    .footer {
-        display: grid;
-    }
-    
-
-
+    width: 100vw;
+    height: 110vh;
+    background-color: #EFEDE9;
+    color: rgb(114, 104, 104);
 }
 
+    .portfolio {
+
+    width: 100vw;
+    height: 110vw;
+    background-color: white;
+    color: black;
+}
+
+    .about {
+
+    height: 150vh;
+    width: 100vw;
+}
+
+    .about img {
+
+    margin-top: 20px;
+}
+    .about-info {
+    grid-column: 1/5;
+    padding: 6em;
+}
+    .about-info h2 {
+
+    margin-top: 10px;
+    font-size: 3em;
+    color: black;
+}
+
+    .contact__heading{
+        font-size: 18px;   
+    }
+
+    .container__contac{
+        padding-top: 0px;
+        align-content: center;
+        height: 60vh;
+    }
+
+    .form {
+
+        display: flex;
+        flex-direction: column;
+        width: 40vw;   
+    }
+
+    .contact__section{
+        margin-top: 5px;
+        padding-top: 0px;
+    }
+
+    .card{
+        height: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
